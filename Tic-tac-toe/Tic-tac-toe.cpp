@@ -6,6 +6,10 @@
 
 int main()
 {
+	GameLogic gamelogic;
+	gamelogic.DrawField();
+	gamelogic.ViewField();
+	system("pause");
     return 0;
 }
 
