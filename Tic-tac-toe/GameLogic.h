@@ -8,8 +8,9 @@ class GameLogic
 private:
 
 public:
+	void SelectSide();
 	void DrawField();
 	void ViewField();
-	void Move(int, int);
+	void Move(); 
 };
 #endif

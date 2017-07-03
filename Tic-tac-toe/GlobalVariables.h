@@ -5,6 +5,8 @@
 namespace GlobalVaribles {
 	const int SIZE_FIELD = 3;
 	char Field[SIZE_FIELD][SIZE_FIELD]; //Field user
-	int x, y;
+	char selectedSideUser;
+	char selectedSideComputer;
+	bool USER_MOVE;
 }
 #endif // __GLOBALS_H__
