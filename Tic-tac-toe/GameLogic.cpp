@@ -18,3 +18,8 @@ void GameLogic::ViewField() {
 		cout << endl;
 	}
 };
+
+void GameLogic::Move(int x, int y) {
+	if (x != 0 && y != 0 && !(x > 3) && !(y > 3))
+		GlobalVaribles::Field[x][y] = 'X';
+}

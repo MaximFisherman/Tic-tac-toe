@@ -10,6 +10,6 @@ private:
 public:
 	void DrawField();
 	void ViewField();
-	void Move();
+	void Move(int, int);
 };
 #endif
