@@ -9,9 +9,15 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <vector>
 #include <iostream>
+
+#include "stdlib.h"
+#include "string.h"
+
+#include "MinMax.h"
 #include "GameLogic.h"
-//#include "GlobalVariables.h"
+
 
 
 

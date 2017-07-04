@@ -10,9 +10,10 @@ int main()
 	int x, y; 
 	gamelogic.DrawField(); //Initialization field
 	gamelogic.SelectSide();
+	gamelogic.ViewField();
 	while (true) {
-		gamelogic.ViewField();
 		gamelogic.Move();
+		gamelogic.ViewField();
 	}
     return 0;
 }
