@@ -8,5 +8,6 @@ namespace GlobalVaribles {
 	char selectedSideUser;
 	char selectedSideComputer;
 	bool USER_MOVE;
+	std::vector<int> board(10);
 }
 #endif // __GLOBALS_H__

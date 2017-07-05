@@ -7,7 +7,6 @@ using namespace std;
 int main()
 {
 	GameLogic gamelogic;
-	int x, y; 
 	gamelogic.DrawField(); //Initialization field
 	gamelogic.SelectSide();
 	gamelogic.ViewField();

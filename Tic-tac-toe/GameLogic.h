@@ -3,23 +3,23 @@
 #define __GAMELOGIC_H__
 #include "stdafx.h"
 
-using std::vector;
+using namespace std;
 
 class GameLogic 
 {
 protected:
-	vector<int> board{ 0,0,0,0,0,0,0,0,0 };
+	std::vector<int> board;
 	int move = 0;
 public:
+	GameLogic();
 	void SelectSide();
 	void DrawField();
 	void ViewField();
 	void Move(); 
-
+	void ConvertToField();
+	
 	//MinMax alhoritm
 	int Win(vector<int> board);
-	vector<int> ConvertBoard(vector<int> board);
-	void ConvertToField(int);
 	int MinMaxAlhoritm(vector<int> board, int player);
 };
 #endif
