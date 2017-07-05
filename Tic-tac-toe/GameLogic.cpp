@@ -66,13 +66,13 @@ void GameLogic::Move() {
 
 	//Move computer
 	if (!USER_MOVE) {
-		cout << "Move computer"<<endl;
+		/*cout << "Move computer"<<endl;
 		for (int i = 0; i < SIZE_FIELD * SIZE_FIELD; i++)
-			cout << board[i] << " " << endl;
+			cout << board[i] << " " << endl;*/
 		board = ConvertBoard(board);
-		for (int i = 0; i < SIZE_FIELD * SIZE_FIELD; i++)
+		/*for (int i = 0; i < SIZE_FIELD * SIZE_FIELD; i++)
 			cout << board[i] << " ";
-
+*/
 		move = -1;
 		int score = -2;
 		int i;
@@ -90,10 +90,9 @@ void GameLogic::Move() {
 		//returns a score based on minimax tree at a given node.
 		board[move] = 1;
 		USER_MOVE = true;
-		cout << "Move in: " << move<<endl;
+		ConvertToField(move);
 	}
 }
-
 
 
 int GameLogic::Win(vector<int> board) {
@@ -110,7 +109,14 @@ int GameLogic::Win(vector<int> board) {
 };
 
 void GameLogic::ConvertToField(int move) {
-	//for(int )
+	int j = 0, i = 0;
+	for (int K = 0; K < move; K++) {
+		if (K % 3 == 0) {
+			j++; i = 0;
+		}
+		i++;
+	}
+	Field[i][j] = selectedSideComputer;
 };
 
 vector<int> GameLogic::ConvertBoard(vector<int> board) {
@@ -120,7 +126,7 @@ vector<int> GameLogic::ConvertBoard(vector<int> board) {
 			board[i] = 1;
 		if (GlobalVaribles::Field[i][k] == GlobalVaribles::selectedSideUser)
 			board[i] = -1;
-	
+		if (i % 3 == 0)
 			k++;
 	}
 	return board;
