@@ -13,7 +13,19 @@ int main()
 	while (true) {
 		gamelogic.Move();
 		gamelogic.ViewField();
+
+		if (gamelogic.Win() == 1) {
+			system("cls");
+			cout << " Your opponent win";
+			break;
+		}
+		if (gamelogic.Win() == -1) {
+			system("cls");
+			cout << " You win";
+			break;
+		}
 	}
+	system("pause");
     return 0;
 }
 

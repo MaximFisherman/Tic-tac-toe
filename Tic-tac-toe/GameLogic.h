@@ -17,9 +17,11 @@ public:
 	void ViewField();
 	void Move(); 
 	void ConvertToField();
+
+	//Ñondition Win 
+	int Win();
 	
 	//MinMax alhoritm
-	int Win(vector<int> board);
 	int MinMaxAlhoritm(vector<int> board, int player);
 };
 #endif
